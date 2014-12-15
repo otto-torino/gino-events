@@ -1,0 +1,275 @@
+/* css events. E' preferibile autogenerarlo a partire dal sorgente less */
+#calendar-events h1 {
+    text-align: center;
+}
+#calendar {
+    width: 100%;
+    padding-bottom: 20px;
+}
+#calendar-controllers {
+    padding: 20px 10px 10px;
+    width: 100%;
+    border-top: 1px solid #cfcfcf;
+}
+#calendar-controllers .fa {
+    margin-right: 10px;
+}
+.k-clear {
+    clear: both;
+}
+.k-container { /* no padding here */
+    position: relative;
+} 
+.k-container .fa {
+    cursor: pointer;
+}
+.k-ctrl-prev {
+    text-align: left;
+}
+.k-ctrl-next {
+    text-align: right;
+}
+.k-container table {
+    width: 100%;
+}
+.k-table-head {
+    text-align: center;
+    border-bottom: 1px solid #cfcfcf;
+    color: #000;
+}
+.k-table-head td {
+    padding: 5px 5px 10px;
+}
+.k-body-container {
+    /* overflow: hidden; */
+}
+.k-current-month, .k-current-day {
+    margin-right: 5px;
+}
+.k-current-month {
+    font-weight: bold;
+}
+.k-table-body {
+    transition: all 0.2s ease 0s;
+}
+.k-table-body th {
+    text-align: center;
+    text-transform: uppercase;
+    color: #9b9b9b;
+    padding: 10px 5px;
+}
+.k-table-body td {
+    text-align: center;
+    border-right: 1px solid #cfcfcf;
+    color: 000;
+    padding: 10px 5px;
+}
+.k-table-body td:last-child {
+    border-right-width: 0px;
+}
+.k-other_month {
+    color: #9b9b9b;
+}
+.k-today {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.k-filled {
+    cursor: pointer;
+}
+.k-filled:after {
+    background: #cc0000 !important;
+    border-radius: 50%;
+}
+.k-day:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    margin-left: 5px;
+    top: -4px;
+
+}
+
+.k-day-content {
+    transition: all 0.4s ease 0s;
+    overflow: auto;
+    padding: 10px 20px;
+}
+.k-day-content ul {
+    padding-left: 5px;
+}
+.k-day-content li {
+    list-style-type: none;
+}
+.k-day-content li:before {
+    content: "";
+    font-family: 'FontAwesome';
+    margin-right: 5px;
+}
+.k-day-content .dd {
+    margin-left: 10px;
+}
+
+#month_view {
+    color: #ccc;
+}
+
+#month_view.enabled {
+    color: #dd4400;
+    cursor: pointer;
+}
+
+/* spinner */
+.spinner-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1000000;
+}
+.spinner-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -15px 0 0 -15px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: solid 10px #aaa;
+  animation: spin 0.8s linear infinite;
+  -webkit-animation: spin 0.8s linear infinite;
+}
+.spinner-content:before {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  margin-top: 15px;
+  position: absolute;
+  top: 12px;
+  box-shadow: 2px 0 2px #fff;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg)
+  }
+  
+  33%{
+    transform: rotate(120deg);
+  }
+  
+  66%{
+    transform: rotate(240deg);
+  }
+   100%{
+    transform: rotate(360deg)
+  }
+}
+@-webkit-keyframes spin{
+  0%{
+    transform: rotate(0deg)
+  }
+  
+  33%{
+    transform: rotate(120deg);
+  }
+  
+  66%{
+    transform: rotate(240deg);
+  }
+   100%{
+    transform: rotate(360deg)
+  }
+}
+
+/* showcase */
+#showcase-events {
+    margin-right: 0 !important;
+}
+#showcase-events header {
+    display: none;
+}
+#showcase-events table {
+    margin: auto;
+}
+#showcase-events table td {
+    padding: 5px;
+}
+#showcase-wrapper-events {
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+#showcase-wrapper-events img {
+    border: 1px solid #AAAAAA;
+}
+#showcase-events .showcase-item {
+    background: url("../../../graphics/fondino.jpg") no-repeat scroll right top #FFFFFF;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    width: 755px;
+}
+#showcase-events .scase-sym {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 1px 1px #828282 inset, 0 1px 1px #FFFFFF;
+    cursor: pointer;
+    height: 20px;
+    overflow: hidden;
+    width: 20px;
+}
+#showcase-events .scase-sym span {
+    background: none repeat scroll 0 0 #B84B56;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 1px 2px #000000 inset, 0 1px 1px #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    margin-left: -20px;
+    transition: all 100ms ease 0s;
+    width: 20px;
+}
+#showcase-events .scase-sym.on span {
+    margin: 0 !important;
+}
+#showcase-events .scase-sym.fwd span {
+    margin-left: 20px;
+}
+#showcase-events .scase-sym.rwd span {
+    margin-left: -20px;
+}
+#showcase-events .caption {
+    background: none repeat scroll 0 0 #544848;
+    bottom: 0;
+    color: #FFFFFF;
+    opacity: 0.9;
+    padding: 5px 10px;
+    position: absolute;
+    width: 430px;
+}
+#showcase-events .caption h1 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 5px 0;
+}
+#showcase-events .caption a:link, .caption a:visited {
+    color: #DDFD04;
+}
+#showcase-events .caption p {
+    font-size: 0.9em;
+    line-height: 1.3em;
+    margin: 5px 0;
+}
+
+/* detail */
+.events-time {
+    font-size: 13px;
+}
+.events-time span {
+    font-weight: 700;
+}

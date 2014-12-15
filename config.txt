@@ -1,0 +1,1 @@
+name:"events",version:"1.0.0",tbl_name:"events",instantiable:"1",description:"Gestore di eventi calendarizzati",removable:"1",folders:"contents/events"
