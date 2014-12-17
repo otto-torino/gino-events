@@ -455,9 +455,6 @@ class events extends \Gino\Controller
         $month = \Gino\cleanVar($request->GET, 'month', 'int');
         $year = \Gino\cleanVar($request->GET, 'year', 'int');
 
-        var_dump($month);
-        var_dump($request->GET);
-
         $where = array(
             "instance='".$this->_instance."'",
             "published='1'"
