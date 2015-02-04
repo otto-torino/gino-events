@@ -99,7 +99,7 @@ class Category extends \Gino\Model
         } 
         $where = implode(' AND ', $where_arr);
 
-        $rows = $db->select($selection, $table, $where, $order, null);
+        $rows = $db->select($selection, $table, $where, array('order'=>$order));
         if(count($rows)) {
             foreach($rows as $row) {
                 $res[$row['id']] = \Gino\htmlChars($row['name']);
