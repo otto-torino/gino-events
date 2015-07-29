@@ -102,12 +102,13 @@ class Category extends \Gino\Model
         $rows = $db->select($selection, $table, $where, array('order'=>$order));
         if(count($rows)) {
             foreach($rows as $row) {
-                $res[$row['id']] = \Gino\htmlChars($row['name']);
+                $session = \Gino\Session::instance();
+        		$trd = new \Gino\Translation($session->lng, $session->lngDft);
+        		$res[$row['id']] = \Gino\htmlChars($trd->selectTXT($table, 'name', $row['id']));
             }
         }
 
         return $res;
-
     }
 
 }
